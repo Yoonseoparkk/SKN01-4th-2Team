@@ -8,6 +8,7 @@
 </div>
 <br><br><br>
 
+<div align="center">
 # 1. Introduction Team (팀 소개)
 
 ### ATT(Attention)
@@ -20,7 +21,7 @@
 # 2. Introduction Project (프로젝트 개요)
 
 ## 소개
-IF는 사용자들이 LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. 
+LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. 옴니버스 스토리 게임으로 16가지 MBTI 유형으로 이루어진 AI와 소개팅을 하여 이상형을 알아갑니다. 
 
 ## 배경
 사회적인 이슈로 저출산 문제가 끝임없이 야기되고 있는 상황에서 저희가 배운 LLM과 AI의 기술로 저출산이라는 문제를 어떻게 해결 할 수 있을까 ? 라는 고민을 했습니다.
@@ -33,17 +34,13 @@ IF는 사용자들이 LLM 기반 AI 이상형과 소개팅을 하며 대화하�
 - 마음에 드는 사람을 만날 기회가 줄어들고 연애를 하기가 어려워지는 사회 분위기 속에서 , 자신이 어떤 유형의 연애 상대를 원하는지 기준을 세우기조차 쉽지 않은 상황입니다.
 - [이프]는 AI 기반 이상형 매칭 서비스입니다. 어텐션팀은 사용자에게 다양한 유형의 AI 이성과의 소개팅 경험을 제공하고, 이상형을 정립할 수 있는 서비스를 제공하고자 합니다.
 
-
-
-
+![image1](https://github.com/user-attachments/assets/5cef70d2-3b58-428b-86bc-01483f030e88)
+![image2](https://github.com/user-attachments/assets/319254f2-5657-4cc6-b934-8ca21c7be7df)
 
 ## 목표
-- **다양한 이모티콘 제공**: 사용자들이 다양한 감정과 상황에 맞는 이모티콘을 찾을 수 있도록 다양한 제품을 제공합니다.
-- **사용자 리뷰와 게시글 플랫폼**: 사용자들이 구매한 이모티콘에 대한 리뷰를 작성하고, 자신만의 게시글을 작성할 수 있는 공간을 제공하여 커뮤니티를 활성화합니다.
-- **편리한 구매 경험**: 사용자들이 쉽고 빠르게 원하는 이모티콘을 검색하고 구매할 수 있도록 직관적이고 효율적인 사용자 경험을 제공합니다.
-- **정보 보안**: 사용자 정보와 결제 정보를 안전하게 관리하여 신뢰성 있는 서비스를 제공합니다.
- 
-
+- **MBTI 소개팅 (Main Service)**: 16가지 MBTI 유형으로 이루어진 AI와 소개팅을 진행 하여 나와 궁합이 제일 잘 맞는 MBTI가 누구인지 알아갑니다.
+- **사용자의 소개팅 대화를 분석해 말투 및 대화법을 추천**: 대화 내용을 요약해서 학습하고 더 좋은 이성이 되도록 피드백 하고 대화의 어떤 부분에서 호감도가 올랐는지 분석해서 알려주는 서비스를 제공 합니다.
+- **나의 이상형 프로필 생성**: 사용자가 키워드를 입력하면 기본 프로필이 아닌 나만의 프로필로 설정이 가능 합니다.  ex) “뱀상에 키는 160-170사이에 얼굴은 계란형에 이목구비가 뚜렷했으면 좋겠어 !” 를 입력 한다면 최대한 키워드에 맞는 이미지를 추천하고 프로필 사진으로 설정 합니다.
 
 # 3. ERD 구성
 
@@ -60,17 +57,98 @@ IF는 사용자들이 LLM 기반 AI 이상형과 소개팅을 하며 대화하�
 작은 것 같지만 이와 같은 것들이 쌓여서 아주 기민하고 민첩한 조직을 만들어 냅니다.
 ```
 
+# 4. Backend 애자일 보드 - 요구 사항 정의서 Backend 데이터 관리로 Django 구성
+![image6](https://github.com/user-attachments/assets/00f0280e-16f3-4763-95d7-3dce6212645f)
+Domain 개수:
+<br>
+Domain 설명:
+# 5. Frontend 애자일 보드 - 화면 설계서 Frontend 페이지를 React / Vue 로 구성
+![image7](https://github.com/user-attachments/assets/5e64b19b-e936-401c-b100-71eefbc5a922)
+Domain 개수:
+<br>
+Domain 설명:
+# 6. FastAPI 애자일 보드 - AI 서빙 설계서 AI 서빙용으로 FastAPI 구성
+![image8](https://github.com/user-attachments/assets/6487c9bd-1f13-40b7-b6b7-67e181ac919a)
+Domain 개수:
+<br>
+Domain 설명:
+# 7. AI-Client 애자일 보드 - AI 서버 설계서 비용 최적화를 위해 DLLS 구성 (Deep Learning Local Server) 보안 설정을 위한 TLS / SSL 소켓 구성
+![image9](https://github.com/user-attachments/assets/17a4ad21-271c-4177-a308-94fe398c4aa9)
+Domain 개수:
+<br>
+Domain 설명:
+# 8. Unity 애자일 보드 - 게임 개발 설계서
+![image10](https://github.com/user-attachments/assets/ae3c8d37-ec94-4de1-af0b-e11e067923e6)
+Domain 개수:
+<br>
+Domain 설명:
 
-# 4. Backend 애자일 보드 - 요구 사항 정의서
-![image](https://github.com/user-attachments/assets/a08371e6-e09d-44e0-b81a-55681a0ce379)
-# 5. Frontend 애자일 보드 - 화면 설계서
-![image](https://github.com/user-attachments/assets/4c9d8bf5-b1e0-4971-8894-bf6672027cfc)
-# 6. FastAPI 애자일 보드 - AI 서빙 설계서
-![image](https://github.com/user-attachments/assets/25b51eae-fe48-4b46-be1a-d43a50781b1e)
-# 7. 시스템(서비스) 구성도
 
-![image](https://github.com/user-attachments/assets/8ffdbe57-2073-4c69-a142-db8ecb1b5f08)
-![image](https://github.com/user-attachments/assets/85c2c269-ea18-4b84-8f96-f085c161677a)
+
+
+
+
+
+
+
+# 9. 시스템(서비스) 구성도
+
+![image3](https://github.com/user-attachments/assets/5bd631bc-26e5-4f03-9649-8e8fcc832502)
+![image4](https://github.com/user-attachments/assets/a0f54a64-e48d-4f84-be93-3436b70da0d1)
+
+# 10. FastAPI와 DLLS를 활용하여 LLM 작업 진행
+
+
+
+# 11. FastAPI - DLLS 구성에서 Fine Tuning 진행
+비동기 방식으로 서비스가 정지되지 않고 AI 작업 가능 여부
+
+# 12. 각자 팀 주제에 따라 TF-IDF 기반의 벡터 산출
+주제에 맞게 벡터 결과를 비교
+검색 속도 향상을 위해 벡터 값을 벡터 DB 에 저장
+사용자 요청에 대한 검색 속도 향상을 통한 응답성 증대
+
+# 13. 
+Frontend / Backend / FastAPI / DLLS 구성에서 모든 동작이 안정적으로 잘 실행되는지 확인
+FastAPI - DLLS 구성에서 사용자 요청에 따른 LLM 동작이 잘 동작하는지 확인
+구성한 사용자 정의형 프로토콜이 잘 동작하는지 확인
+
+시연 결과 모습
+
+요 템플릿으로 구성하시면 될 것 같습니다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 8. Manual Deploy (수동 배포 진행 절차)
 
@@ -456,7 +534,8 @@ IF는 사용자들이 LLM 기반 AI 이상형과 소개팅을 하며 대화하�
 이렇게 5단계로 구성하여 이슈의 배포와 관리를 진행 했습니다.
 
 # 13. 한 줄 회고
-👶🏻주현: 짧은 기간이지만, 좋은 협업이었고, 4차 프로젝트가 기대된다. <br>
 👧🏻호준: 좋은 팀원들을 만나 이번 프로젝트를 진행하는 동안 비록 초반에 속도는 조금 늦었지만 다같이 공부하면서 성장할 수 있었던 시간이었던 것 같아 좋았다. <br>
 👦🏻우영: 개발한 프로젝트의 서비스를 직접 배포를 해보니 신기하고 재미있었다. <br>
 👨🏻‍🏫윤서: 함께 협업을 하면서 강사님이 알려주신 애자일 방식으로 진행해야 하는 이유와 DDD 방식으로 코드를 구성해야 하는 이유에 대해서 몸소 깨달을 수 있어 좋았다.그리고 1달 이상을 팀원들과 열심히 복습하고 프로젝트를 진행했는데, 다들 점점 실력이 오르는게 눈에 보여서 매우 뿌듯했다. 앞으로 어딜 가더라도 맡은 일은 잘 할 수 있을거라 믿는다! 다들 고생했어~
+
+</div>
