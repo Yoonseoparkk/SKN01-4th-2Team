@@ -64,6 +64,16 @@ LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. �
 </div>
 <br><br>
 
+### GAMING
+<div align="center">    
+    <div>
+        <img src="https://img.shields.io/badge/-Unity-000000?style=flat-square&logo=unity&logoColor=white" align="center"/>
+        <img src="https://img.shields.io/badge/-C%23-000000?logo=Csharp&style=flat" align="center"/>
+        <img src="https://img.shields.io/badge/-WebGL-990000?style=flat&logo=webgl&logoColor=white" align="center"/>
+    </div>
+</div>
+<br><br>
+
 ### BACKEND
 <div align="center">    
     <div>
