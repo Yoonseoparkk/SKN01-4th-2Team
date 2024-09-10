@@ -113,7 +113,7 @@ LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. �
 
 # 4. ERD 구성
 
-![image](https://github.com/user-attachments/assets/c67e3732-03e5-4ae6-bd70-1307f41174b1)
+![image](https://github.com/user-attachments/assets/a31d66b2-541e-4c5c-a444-be7d1696e606)
 
 ## 애자일 보드를 사용하는 이유
 ```c
@@ -132,11 +132,11 @@ LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. �
 |Domain|Backlog 개수|Domain 설명|
 |------|---|---|
 |Authentication|4|사용자 인증 및 인가|
-|Account|3|회원 관리|
+|Account|7|회원 관리|
 |GoogleOauth|2|구글 Oauth 로그인 처리|
 |KakaoOauth|2|카카오 Oauth 로그인 처리|
 |NaverOauth|2|네이버 Oauth 로그인 처리|
-|JSON_WEB_TOKEN(JWT)|9|일반 회원 로그인 처|
+|JSON_WEB_TOKEN(JWT)|9|일반 회원 로그인 처리|
 
 # 6. Frontend 애자일 보드 - 화면 설계서 Frontend 페이지를 React / Vue 로 구성
 ![image7](https://github.com/user-attachments/assets/5e64b19b-e936-401c-b100-71eefbc5a922)
@@ -144,14 +144,14 @@ LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. �
 |Domain|Backlog 개수|Domain 설명|
 |------|---|---|
 |AWS|1|S3-Bucket 처리|
-|Account|5|회원 관리|
+|Account|8|회원 관리|
 |Authentication|4|사용자 인증 및 인가|
 |GoogleAuthentication|3|구글 Ouath 로그인|
 |KakaoAuthentication|3|카카오 Ouath 로그인|
 |NaverAuthentication|3|네이버 Ouath 로그인|
 |Home|2|메인 홈 화면|
 |NavgationBar|1|네이게이션 바|
-|Game|8|Unity File Build|
+|Game|9|Unity File Build|
 |ISTP|1|ISTP AI 챗봇|
 |ENFP|1|ENFP AI 챗봇|
 
@@ -170,43 +170,65 @@ LLM 기반 AI 이상형과 소개팅을 하며 대화하는 게임 입니다. �
 
 |Domain|Backlog 개수|Domain 설명|
 |------|---|---|
-|ENFP|3|-|
-|ISTP|2|-|
-|Feedback|1|-|
-|FineTune|1|-|
-|Q&A|1|-|
+|ENFP|3|ENFP 챗봇과 대화|
+|ISTP|2|ISTP 챗봇과 대화|
+|Feedback|1|대화 내역 피드백을 통한 강화학습|
+|FineTune|1|모델 튜닝|
+|Q&A|1|약속 장소, 날짜 등의 퀘스트를 수행|
 
 # 9. Unity 애자일 보드 - 게임 개발 설계서
 ![image10](https://github.com/user-attachments/assets/ae3c8d37-ec94-4de1-af0b-e11e067923e6)
 
 |Domain|Backlog 개수|Domain 설명|
 |------|---|---|
-|Likability|3|-|
-|Quest|5|-|
-|Chat|4|-|
-|Cafe|2|-|
-|Menu|1|-|
-|Scene|1|-|
+|Likability|3|호감도|
+|Quest|5|퀘스트|
+|Chat|4|채팅|
+|Cafe|2|첫만남카페|
+|Menu|1|메뉴선택|
+|Scene|1|유니티 전체 씬 관리|
 
 # 10. 시스템(서비스) 구성도
 
 ![image3](https://github.com/user-attachments/assets/5bd631bc-26e5-4f03-9649-8e8fcc832502)
-![image4](https://github.com/user-attachments/assets/a0f54a64-e48d-4f84-be93-3436b70da0d1)
+![image](https://github.com/user-attachments/assets/e6b005f0-8944-4502-a78e-9700eb5d8fee)
 
 # 11. FastAPI와 DLLS를 활용하여 LLM 작업 진행
 
-# 12. FastAPI - DLLS 구성에서 Fine Tuning 진행
-비동기 방식으로 서비스가 정지되지 않고 AI 작업 가능 여부
+FastAPI 는 비동기 방식으로 처리 하기 위해 사용
+DLLS (Deep Learning Local Server) 
 
-# 13. 각자 팀 주제에 따라 TF-IDF 기반의 벡터 산출
-주제에 맞게 벡터 결과를 비교
-검색 속도 향상을 위해 벡터 값을 벡터 DB 에 저장
-사용자 요청에 대한 검색 속도 향상을 통한 응답성 증대
+![image](https://github.com/user-attachments/assets/1b9457e2-35b4-495c-97b4-bb5070ec4d39)
+
+# 12. FastAPI - DLLS 구성에서 Fine Tuning 진행
+
+Fine Tuning은 OPENAI API으로 진행
+
+**아래와 같은 JSONL 문법에 따라 학습을 진행**
+
+{"messages": [{"role": "system", "content": ""}, {"role": "user", "content": ""}, {"role": "assistant", "content": ""}]}
+
+![image](https://github.com/user-attachments/assets/997ca5b6-ee5a-4963-bcbb-55ca66fdc11a)
+
+위의 예시와 같은 데이터의 .JSONL 파일을 학습 시킨 결과
+![11제목 없음](https://github.com/user-attachments/assets/cea3c46a-4f4f-4eac-99ab-d17700506527)
+![22제목 없음](https://github.com/user-attachments/assets/441c7f00-4c32-47d8-a258-a53296e0b339)
+
+
+# 13. 성능 고도화를 위한 벡터 DB 활용
+
+AI 챗봇의 성능을 끌어 올리기 위해 사용자의 대화 내역을 저장하고 피드백에 활용하기 위해 구현
+
+![제목 없음](https://github.com/user-attachments/assets/482140cb-6512-45f0-95be-eac9bfc8b0f0)
 
 # 14. 
-Frontend / Backend / FastAPI / DLLS 구성에서 모든 동작이 안정적으로 잘 실행되는지 확인
-FastAPI - DLLS 구성에서 사용자 요청에 따른 LLM 동작이 잘 동작하는지 확인
-구성한 사용자 정의형 프로토콜이 잘 동작하는지 확인
+Frontend / Backend 연동 실행 예시
+
+![image](https://github.com/user-attachments/assets/ceaefe20-74e8-44b8-9f04-8ed57f0ffa9c)
+
+FastAPI / DLLS 구성 연동 실행 예시
+
+![image](https://github.com/user-attachments/assets/235da264-e688-4f47-b795-94504763b024)
 
 # 15. 시연 결과 모습
 
